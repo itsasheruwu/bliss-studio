@@ -35,6 +35,6 @@ With Xcode 26 or later and Swift 6.2 or later, run `./script/build_and_run.sh` t
 
 ## Updates
 
-Bliss Studio 1.0.1 and later check for signed updates automatically. Use **Bliss Studio → Check for Updates…** to check immediately, or change automatic checking and installation in the same menu. If you have 1.0.0, download the current version once to enable future in-app updates.
+Bliss Studio 1.0.2 and later check for signed updates automatically. Use **Bliss Studio → Check for Updates…** to check immediately, or change automatic checking and installation in the same menu. If you have 1.0.0 or 1.0.1, download the current version once to enable future in-app updates.
 
 For a release, increment the marketing version and build number in `Packaging/Info.plist`. On the release Mac, run `./script/package_release.sh` with the Bliss Studio EdDSA key in Keychain. Publish the generated ZIP and signed `appcast.xml` together on the matching GitHub release and mark it latest.
