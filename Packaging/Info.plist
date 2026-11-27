@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>Bliss Studio</string>
+	<key>CFBundleExecutable</key>
+	<string>BlissStudio</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.itsasheruwu.bliss-studio</string>
+	<key>CFBundleName</key>
+	<string>Bliss Studio</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>15.0</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Bliss Studio follows the current song and sends playback controls to the music player you connect.</string>
+	<key>NSAudioCaptureUsageDescription</key>
+	<string>Bliss Studio reads system audio locally to animate the edge light and follow the beat.</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.json</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Bliss Studio lyric effects</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.itsasheruwu.bliss-studio.lyric-effects</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>bliss</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
