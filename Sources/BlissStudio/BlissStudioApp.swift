@@ -1,4 +1,5 @@
 import AppKit
+import Sparkle
 import SwiftUI
 
 @main
@@ -8,6 +9,9 @@ struct BlissStudioApp: App {
     var body: some Scene {
         Settings { StudioSettings(windows: delegate.windows) }
             .commands {
+                CommandGroup(after: .appInfo) {
+                    StudioUpdateMenu(controller: delegate.updater)
+                }
                 CommandGroup(after: .windowArrangement) {
                     Button("Open Player") { delegate.windows.openPlayer() }
                         .keyboardShortcut("m", modifiers: [.command, .shift])
@@ -19,6 +23,7 @@ struct BlissStudioApp: App {
 }
 
 final class StudioDelegate: NSObject, NSApplicationDelegate {
+    let updater = SPUStandardUpdaterController(startingUpdater: false, updaterDelegate: nil, userDriverDelegate: nil)
     let windows: StudioWindows
     private var migrationError: Error?
 
@@ -33,6 +38,7 @@ final class StudioDelegate: NSObject, NSApplicationDelegate {
         if let migrationError { NSApp.presentError(migrationError) }
         NSApp.setActivationPolicy(.regular)
         windows.openPlayer()
+        updater.startUpdater()
     }
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
